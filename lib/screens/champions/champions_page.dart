@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app_lol/model/networking/champion_model.dart';
 import 'package:app_lol/model/networking/champion_view_model.dart';
-import 'package:app_lol/screens/champions/champions_detail_page.dart';
+import 'package:app_lol/screens/champions/champion_details/champions_detail_page.dart';
 import 'package:app_lol/components/custom_search_field.dart';
 import 'package:app_lol/components/filter_pop_up.dart';
 
@@ -127,7 +127,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      ChampionDetailPage(champion: champion),
+                                    ChampionDetailPage(championId: champion.id,),
                                 ),
                               );
                             },
@@ -154,7 +154,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                     ),
-                                    maxLines: 2,
+                                    maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),

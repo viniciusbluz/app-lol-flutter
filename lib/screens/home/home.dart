@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    _searchController.dispose(); // Libera recursos ao sair da página
+    _searchController.dispose(); 
     super.dispose();
   }
 
@@ -27,14 +27,14 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: CustomSearchField(
-              controller: _searchController, // Passando o controller
+              controller: _searchController,
               hintText: 'Procurar um invocador',
               onChanged: (value) {
                 print('Texto digitado: $value');
               },
               onSuffixIconPressed: () {
                 setState(() {
-                  _searchController.clear(); // Limpa o campo de busca
+                  _searchController.clear(); 
                 });
                 print('Ícone de limpar pressionado');
               },
